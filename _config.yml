@@ -1,0 +1,28 @@
+# Site settings
+title: Hadi Al Assaf - Technology Consultant
+description: >-
+  Technology Consultant specializing in Digital Transformation, Solutions Architecture, 
+  and Business Growth. MSc in IT Management, Former Senior Manager, AWS Certified.
+baseurl: ""
+url: ""
+
+# Personal info
+name: Hadi Al Assaf
+email: hadi.alassaf@gmail.com
+location: Dubai, UAE
+linkedin: "https://www.linkedin.com/in/hadi-al-assaf/"
+
+# Tagline
+tagline: Technology Consultant | Driving Digital Transformation & Business Growth
+subtitle: MSc in IT Management • Former Senior Manager • AWS Certified Solutions Architect
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
