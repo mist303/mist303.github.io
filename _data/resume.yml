@@ -3,10 +3,10 @@ experience:
     title: Senior Solutions Engineer
     period: Jun 2022 – Present
     location: Remote
-    description: Subject matter expert driving enterprise solutions across MENA region
+    description: Subject matter expert driving enterprise solutions across MEA region
     achievements:
       - Primary Solutions Engineer for Middle East & North Africa, specializing in Identity Verification, KYC, AML, and Risk Management solutions
-      - Generated $9M+ in revenue through new and renewal opportunities across Fintech, Banking, and Cryptocurrency sectors
+      - Generated <span class="highlight">$9M+ in revenue</span> through new and renewal opportunities across Fintech, Banking, and Cryptocurrency sectors
       - Expanded regional market presence through strategic partnerships and enterprise client acquisitions
       - Architected B2B and B2C solutions leveraging Mobile SDKs, Web integrations, and RESTful APIs for seamless identity verification workflows
       - Bridged compliance gaps between regional identity regulations and global product capabilities, enabling market entry for new solutions
@@ -19,7 +19,7 @@ experience:
     achievements:
       - Managed cross-functional team of consultants in high-security cybersecurity environment
       - Reported directly to Digital Transformation Officer, driving strategic IT initiatives across the organization
-      - Streamlined IT portfolio and service management processes, scaling to support 1,200+ enterprise users
+      - Streamlined IT portfolio and service management processes, scaling to support <span class="highlight">1,200+ enterprise users</span>
       - Founded and scaled data analytics subdepartment from ground up, implementing Jira, PowerBI, EazyBI, and Tableau stack
       - Strategic advisor to engineering and technical departments for project management, SDLC optimization, and knowledge management frameworks
 
@@ -30,8 +30,8 @@ experience:
     description: Atlassian Solutions Partner
     achievements:
       - Led pre-sales and post-sales consulting for Atlassian ecosystem (Jira, Confluence, Bitbucket)
-      - Transformed requirements for 20+ enterprise clients into production-ready on-premise and cloud solutions
-      - Delivered 70+ custom POCs demonstrating solution fit and business value
+      - Transformed requirements for <span class="highlight">20+ enterprise clients</span> into production-ready on-premise and cloud solutions
+      - Delivered <span class="highlight">70+ custom POCs</span> demonstrating solution fit and business value
       - Developed custom scripts, workflow automations, and third-party integrations to extend platform capabilities
 
   - company: Etisalat
@@ -41,7 +41,7 @@ experience:
     description: Telecommunications
     achievements:
       - Led end-to-end software development lifecycle for multiple enterprise projects at regional telecom leader
-      - Pioneered development of Etisalat's first AI-powered customer support chatbot using Java, React, HTML, and Google NLP
+      - Pioneered development of <span class="highlight">Etisalat's first AI-powered customer support chatbot</span> using Java, React, HTML, and Google NLP
       - Built project management and network health monitoring platforms for infrastructure operations
       - Conducted comprehensive QA testing of network resource management and CRM solutions using grey-box and black-box methodologies
 
