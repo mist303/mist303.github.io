@@ -5,7 +5,7 @@ layout: default
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>{{ site.name }} - Senior Solutions Engineer</title>
     <meta name="description" content="{{ site.description }}">
     <style>
@@ -97,6 +97,15 @@ layout: default
             color: white;
             border: 4px solid white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-info h1 {
@@ -438,7 +447,9 @@ layout: default
         </div>
 
         <div class="profile-card">
-            <div class="profile-avatar">{{ site.name | split: ' ' | map: 'first' | join: '' | upcase }}</div>
+            <div class="profile-avatar">
+                <img src="https://media.licdn.com/dms/image/v2/C4D03AQHpGW1tzd55Qw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1609327951152?e=1771459200&v=beta&t=Agnxe-x4BvIqQLFvDb8YoYCeC06JKPHSMDzMs-zIY6c" alt="{{ site.name }}">
+            </div>
             <div class="profile-info">
                 <h1>{{ site.name }}</h1>
                 <p class="tagline">{{ site.tagline }}</p>
