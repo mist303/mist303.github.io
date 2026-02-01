@@ -25,7 +25,7 @@ layout: default
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             background: #ffffff;
             border-radius: 0;
@@ -42,9 +42,10 @@ layout: default
         .header {
             background: linear-gradient(135deg, #0a66c2 0%, #0d47a1 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 0;
             position: relative;
             overflow: hidden;
+            height: 200px;
         }
 
         .header::before {
@@ -67,89 +68,171 @@ layout: default
         .header-content {
             position: relative;
             z-index: 1;
+            height: 100%;
         }
 
-        .header h1 {
-            font-size: 3em;
+        .profile-card {
+            background: white;
+            color: #54575a;
+            margin: -80px 40px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px #d5dce0;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #0a66c2 0%, #0d47a1 100%);
+            border-radius: 50%;
+            margin: -70px auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: 700;
+            color: white;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-info h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .profile-info .tagline {
+            font-size: 1.1em;
+            color: #0a66c2;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .profile-info .subtitle {
+            font-size: 0.95em;
+            color: #757f87;
+            font-weight: 400;
+            font-style: normal;
             margin-bottom: 15px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .header .tagline {
-            font-size: 1.3em;
-            opacity: 0.9;
-            margin-bottom: 12px;
-            font-weight: 300;
-        }
-
-        .header .subtitle {
-            font-size: 1em;
-            opacity: 0.75;
-            font-weight: 300;
-            font-style: italic;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .contact-links a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
+            padding: 10px 24px;
+            background: #0a66c2;
+            border: 2px solid #0a66c2;
+            border-radius: 24px;
             transition: all 0.3s ease;
             font-size: 0.9em;
-            backdrop-filter: blur(10px);
+            font-weight: 600;
         }
 
-        .contact-links a:hover {
-            background: rgba(255,255,255,0.25);
-            border-color: rgba(255,255,255,0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        .contact-links a:first-child {
+            background: white;
+            color: #0a66c2;
+        }
+
+        .contact-links a:first-child:hover {
+            background: #f0f6ff;
+        }
+
+        .contact-links a:not(:first-child):hover {
+            background: #004782;
+            border-color: #004782;
         }
 
         .content {
-            padding: 50px 40px;
+            padding: 40px 40px;
+            background: #f8f9fa;
         }
 
-        .section {
-            margin-bottom: 50px;
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 24px;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px #d5dce0;
+            padding: 40px;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px #d5dce0;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 0.95em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .sidebar-section p {
+            font-size: 0.85em;
+            color: #757f87;
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            font-size: 1.9em;
-            color: #0a66c2;
-            margin-bottom: 25px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #d5dce0;
+            font-size: 1.5em;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e1e8ed;
             display: flex;
             align-items: center;
             gap: 12px;
             font-weight: 700;
         }
 
+        .section {
+            margin-bottom: 40px;
+        }
+
         .job, .education-item {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: #fafbfc;
+            margin-bottom: 28px;
+            padding: 0;
+            background: transparent;
             border-radius: 0;
-            border-left: 4px solid #0a66c2;
-            box-shadow: 0 0 0 1px #e1e8ed;
+            border-left: none;
+            box-shadow: none;
+            border-bottom: 1px solid #e1e8ed;
             transition: all 0.3s ease;
         }
 
+        .job:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+
         .job:hover, .education-item:hover {
-            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.15);
-            background: #f9fafb;
+            box-shadow: none;
+            background: transparent;
         }
 
         .job-header {
@@ -158,26 +241,27 @@ layout: default
             align-items: flex-start;
             margin-bottom: 12px;
             flex-wrap: wrap;
+            padding-bottom: 12px;
         }
 
         .job-title {
-            font-size: 1.4em;
+            font-size: 1.15em;
             font-weight: 700;
-            color: #0a66c2;
+            color: #1a1a1a;
             margin-bottom: 4px;
         }
 
         .company {
-            font-size: 1.15em;
-            color: #54575a;
+            font-size: 1em;
+            color: #757f87;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 0;
         }
 
         .date-location {
             text-align: right;
             color: #757f87;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 500;
         }
 
@@ -189,17 +273,19 @@ layout: default
             font-weight: 600;
             margin-bottom: 10px;
             color: #54575a;
+            font-size: 0.95em;
         }
 
         .job-description ul {
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .job-description li {
             margin-bottom: 8px;
             color: #54575a;
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95em;
         }
 
         .job-description .highlight {
@@ -212,35 +298,41 @@ layout: default
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr;
             gap: 20px;
         }
 
         .skill-category {
-            background: white;
-            padding: 25px;
+            background: transparent;
+            padding: 0;
             border-radius: 0;
-            border-top: 4px solid #0a66c2;
-            box-shadow: 0 0 0 1px #e1e8ed;
+            border-top: none;
+            box-shadow: none;
             transition: all 0.3s ease;
+            border-bottom: 1px solid #e1e8ed;
+            padding-bottom: 24px;
+        }
+
+        .skill-category:last-child {
+            border-bottom: none;
         }
 
         .skill-category:hover {
-            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.15);
-            transform: translateY(-2px);
+            box-shadow: none;
+            transform: none;
         }
 
         .skill-category h3 {
-            color: #0a66c2;
-            margin-bottom: 15px;
-            font-size: 1.15em;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-size: 1em;
             font-weight: 700;
         }
 
         .skill-category p {
-            color: #54575a;
-            line-height: 1.8;
-            font-size: 0.95em;
+            color: #757f87;
+            line-height: 1.6;
+            font-size: 0.9em;
         }
 
         .tags {
@@ -269,15 +361,17 @@ layout: default
 
         .footer {
             background: #f8f9fa;
-            padding: 35px;
+            padding: 24px 40px;
             text-align: center;
             color: #757f87;
             border-top: 1px solid #d5dce0;
+            margin-top: 40px;
         }
 
         .footer p {
-            font-size: 0.95em;
+            font-size: 0.85em;
             color: #757f87;
+            margin: 4px 0;
         }
 
         @media (max-width: 768px) {
@@ -290,7 +384,19 @@ layout: default
             }
 
             .content {
-                padding: 35px 25px;
+                padding: 30px 20px;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 24px;
+            }
+
+            .sidebar {
+                padding: 24px;
             }
 
             .job-header {
@@ -307,7 +413,12 @@ layout: default
             }
 
             .job, .education-item {
-                padding: 20px;
+                padding: 0;
+            }
+
+            .profile-card {
+                margin-left: 20px;
+                margin-right: 20px;
             }
         }
 
@@ -323,123 +434,142 @@ layout: default
 <body>
     <div class="container">
         <div class="header">
-            <div class="header-content">
+            <div class="header-content"></div>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-avatar">{{ site.name | split: ' ' | map: 'first' | join: '' | upcase }}</div>
+            <div class="profile-info">
                 <h1>{{ site.name }}</h1>
                 <p class="tagline">{{ site.tagline }}</p>
-                <p class="subtitle">{{ site.subtitle }}</p>
+                <p class="subtitle">{{ site.location }}</p>
                 <div class="contact-links">
-                    <a href="mailto:{{ site.email }}">✉️ Email</a>
-                    <a href="{{ site.website }}">🌐 Portfolio</a>
-                    <a href="{{ site.linkedin }}">💼 LinkedIn</a>
-                    <a href="#">📍 {{ site.location }}</a>
+                    <a href="mailto:{{ site.email }}">Message</a>
+                    <a href="{{ site.linkedin }}">LinkedIn</a>
+                    <a href="{{ site.website }}">Portfolio</a>
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <section class="section">
-                <h2 class="section-title">💼 Professional Experience</h2>
-                
-                {% for job in site.data.resume.experience %}
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">{{ job.title }}</div>
-                            <div class="company">{{ job.company }}{% if job.description %} • {{ job.description }}{% endif %}</div>
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <section class="section">
+                        <h2 class="section-title">💼 Experience</h2>
+                        
+                        {% for job in site.data.resume.experience %}
+                        <div class="job">
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">{{ job.title }}</div>
+                                    <div class="company">{{ job.company }}</div>
+                                </div>
+                                <div class="date-location">
+                                    <div>{{ job.period }}</div>
+                                    {% if job.location %}<div>{{ job.location }}</div>{% endif %}
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    {% for achievement in job.achievements %}
+                                    <li>{{ achievement }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
                         </div>
-                        <div class="date-location">
-                            <div>{{ job.period }}</div>
-                            <div>{{ job.location }}</div>
+                        {% endfor %}
+                    </section>
+
+                    <section class="section">
+                        <h2 class="section-title">🎓 Education</h2>
+                        
+                        {% for edu in site.data.resume.education %}
+                        <div class="education-item">
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">{{ edu.degree }}</div>
+                                    <div class="company">{{ edu.school }}</div>
+                                </div>
+                                <div class="date-location">
+                                    <div>Graduated {{ edu.graduation }}</div>
+                                    {% if edu.location %}<div>{{ edu.location }}</div>{% endif %}
+                                </div>
+                            </div>
                         </div>
+                        {% endfor %}
+                    </section>
+
+                    <section class="section">
+                        <h2 class="section-title">🚀 Skills</h2>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>Professional Certifications</h3>
+                                <div class="tags">
+                                    {% for cert in site.data.resume.skills.certifications %}
+                                    <span class="tag">{{ cert }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Core Competencies</h3>
+                                <p>{% for comp in site.data.resume.skills.competencies %}{{ comp }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Cloud & Infrastructure</h3>
+                                <div class="tags">
+                                    {% for tech in site.data.resume.skills.cloud %}
+                                    <span class="tag">{{ tech }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Development & APIs</h3>
+                                <div class="tags">
+                                    {% for tech in site.data.resume.skills.development %}
+                                    <span class="tag">{{ tech }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Analytics & BI</h3>
+                                <p>{% for tool in site.data.resume.skills.analytics %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Enterprise Tools</h3>
+                                <p>{% for tool in site.data.resume.skills.tools %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Personal Interests</h3>
+                                <p>{% for interest in site.data.resume.interests %}{{ interest }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>About</h3>
+                        <p>{{ site.subtitle }}</p>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            {% for achievement in job.achievements %}
-                            <li>{{ achievement }}</li>
-                            {% endfor %}
-                        </ul>
+
+                    <div class="sidebar-section">
+                        <h3>Contact</h3>
+                        <p><strong>Email:</strong><br><a href="mailto:{{ site.email }}" style="color: #0a66c2; text-decoration: none;">{{ site.email }}</a></p>
                     </div>
                 </div>
-                {% endfor %}
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">🎓 Education & Credentials</h2>
-                
-                {% for edu in site.data.resume.education %}
-                <div class="education-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">{{ edu.degree }}</div>
-                            <div class="company">{{ edu.school }}</div>
-                        </div>
-                        <div class="date-location">
-                            <div>Graduated {{ edu.graduation }}</div>
-                            <div>{{ edu.location }}</div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">🚀 Skills & Expertise</h2>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>🏆 Professional Certifications</h3>
-                        <div class="tags">
-                            {% for cert in site.data.resume.skills.certifications %}
-                            <span class="tag">{{ cert }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>💡 Core Competencies</h3>
-                        <p>{% for comp in site.data.resume.skills.competencies %}{{ comp }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>☁️ Cloud & Infrastructure</h3>
-                        <div class="tags">
-                            {% for tech in site.data.resume.skills.cloud %}
-                            <span class="tag">{{ tech }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>💻 Development & APIs</h3>
-                        <div class="tags">
-                            {% for tech in site.data.resume.skills.development %}
-                            <span class="tag">{{ tech }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>📊 Analytics & BI</h3>
-                        <p>{% for tool in site.data.resume.skills.analytics %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>🔧 Enterprise Tools</h3>
-                        <p>{% for tool in site.data.resume.skills.tools %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>🌟 Personal Interests</h3>
-                        <p>{% for interest in site.data.resume.interests %}{{ interest }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
 
         <div class="footer">
-            <p style="font-size: 1.1em; margin-bottom: 10px;">© 2024 {{ site.name }}</p>
-            <p>Technology Consultant • {{ site.location }}</p>
-            <p style="margin-top: 15px; font-size: 0.85em; opacity: 0.6;">Built with Jekyll • Hosted on GitHub Pages</p>
+            <p>© 2024 {{ site.name }}</p>
+            <p>Built with Jekyll • Hosted on GitHub Pages</p>
         </div>
     </div>
 </body>
