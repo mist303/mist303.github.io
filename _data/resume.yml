@@ -3,25 +3,27 @@ experience:
     title: Senior Solutions Engineer
     period: Jun 2022 – Present
     location: Remote
-    description: Subject matter expert driving enterprise solutions across MEA region
+    description: Subject market expert at a market leader in AI-powered identity verification, KYC, AML, and Risk Management
     achievements:
-      - Primary Solutions Engineer for Middle East & North Africa, specializing in Identity Verification, KYC, AML, and Risk Management solutions
+      - Primary Solutions Engineer for MENA region, presenting and demonstrating AI/ML capabilities to C-level executives and technical stakeholders, articulating AI values through presentations, RFPs, and POCs
       - Generated <span class="highlight">$9M+ in revenue</span> through new and renewal opportunities across Fintech, Banking, and Cryptocurrency sectors
-      - Expanded regional market presence through strategic partnerships and enterprise client acquisitions
-      - Architected B2B and B2C solutions leveraging Mobile SDKs, Web integrations, and RESTful APIs for seamless identity verification workflows
-      - Bridged compliance gaps between regional identity regulations and global product capabilities, enabling market entry for new solutions
+      - Design B2B and B2C AI-powered solution architectures for clients and partners across Banking, Fintech, and Crypto industries leveraging Mobile, Web, and APIs
+      - Liaise between clients and Jumio's internal technical teams, facilitating effective communication and issue resolution for AI model integration and deployment
+      - Bridge the gap between local identity regulations and Jumio's AI-driven products, expanding regional exposure through significant client partnerships
+      - Contribute to the creation of technical documentation, best practice guides, and other resources
+      - Take on a critical role in mapping, translating, and black-box testing Arabic language extraction models, providing feedback to R&D for model optimization and accuracy improvement
+      - Bridge the gap between local identity regulations and Jumio's new-to-market products
 
   - company: Digital14
-    title: Senior Manager, Technology Consulting
+    title: Senior Manager and Technology Consultant
     period: Feb 2020 – Jun 2022
     location: Abu Dhabi, UAE
-    description: Led consulting teams delivering enterprise-grade BI, portfolio management, and self-service analytics solutions
+    description: In a cybersecurity environment, managed a team of consultants while leading delivery of BI, portfolio and project management, and self-service solutions
     achievements:
-      - Managed cross-functional team of consultants in high-security cybersecurity environment
-      - Reported directly to Digital Transformation Officer, driving strategic IT initiatives across the organization
-      - Streamlined IT portfolio and service management processes, scaling to support <span class="highlight">1,200+ enterprise users</span>
-      - Founded and scaled data analytics subdepartment from ground up, implementing Jira, PowerBI, EazyBI, and Tableau stack
-      - Strategic advisor to engineering and technical departments for project management, SDLC optimization, and knowledge management frameworks
+      - Reporting to the Digital Transformation Officer and Business Applications Director, deployed project, knowledge, service, and analytics management tools leveraging Jira, Confluence, PowerBI, EazyBI, and Tableau
+      - Established data analytics subdepartment that provided reporting and predictive insights
+      - Streamlined IT portfolio and service management processes to serve over 1200 users
+      - Actively consulted the engineering and technical departments with project, software development, and knowledge management solutions
 
   - company: Infosysta
     title: Technical Consultant
@@ -29,21 +31,21 @@ experience:
     location: Dubai, UAE
     description: Atlassian Solutions Partner
     achievements:
-      - Led pre-sales and post-sales consulting for Atlassian ecosystem (Jira, Confluence, Bitbucket)
-      - Transformed requirements for <span class="highlight">20+ enterprise clients</span> into production-ready on-premise and cloud solutions
-      - Delivered <span class="highlight">70+ custom POCs</span> demonstrating solution fit and business value
-      - Developed custom scripts, workflow automations, and third-party integrations to extend platform capabilities
+      - Transformed 20+ of clients' technology and business needs into fully fledged on-prem and SaaS cloud integrations and solutions
+      - Built 70+ tailored POCs of Atlassian's solutions
+      - Developed scripts, automations, and integrations between customers and Atlassian solutions
 
   - company: Etisalat
     title: Software Engineer & Developer
     period: Oct 2015 – Nov 2018
     location: Dubai, UAE
-    description: Telecommunications
+    description: At a telecom and service provider, led several software planning, development, and testing projects
     achievements:
-      - Led end-to-end software development lifecycle for multiple enterprise projects at regional telecom leader
-      - Pioneered development of <span class="highlight">Etisalat's first AI-powered customer support chatbot</span> using Java, React, HTML, and Google NLP
-      - Built project management and network health monitoring platforms for infrastructure operations
-      - Conducted comprehensive QA testing of network resource management and CRM solutions using grey-box and black-box methodologies
+      - Led the development of Etisalat's first AI-powered customer support chatbot using Java, React, HTML, and Google's Natural Language Processing (NLP) APIs, handling customer inquiries, automating support escalations, and integrating with internal backend systems
+      - Developed project management and monitoring as well as network health monitoring solutions
+      - Worked with diverse network technologies including 5G, 4G, MPLS, SDN, IP networks, network resource allocation, integrating backend servers with Point of Presence (POP) systems to ensure seamless service delivery
+      - Deployed a video-chatting software based on WebRTC at my own initiative
+      - Tested networks resource management and CRM telecom solutions in grey and black box settings
 
   - company: IBM
     title: Cloud Advocate Intern
@@ -51,10 +53,10 @@ experience:
     location: Dubai, UAE
     description: ""
     achievements:
-      - Developed and demonstrated cloud applications and web services for academic institutions across MENA region
+      - Developed and demo-ed cloud applications and web services for MENA-based academic leaders
 
 education:
-  - degree: Master of Science, Management of IT
+  - degree: Master of Information Technology Management
     school: University of Wollongong
     graduation: Aug 2022
     location: Dubai, UAE
@@ -70,22 +72,23 @@ skills:
     - AWS Cloud Practitioner
 
   competencies:
-    - Technology Consulting
-    - Solutions Architecture
-    - Digital Transformation
     - People Management
-    - Client Engagement
-    - Strategic Planning
+    - Solutions Consulting
+    - Solution Architecture
     - Project Management
+    - Client Relationship Management
     - Software Development
+    - Strategic Planning
+    - Problem-Solving
+    - Presentations
     - TOGAF
     - ITIL
     - PMP
 
   cloud:
-    - AWS
     - Microsoft Azure
     - IBM Cloud
+    - AWS
     - OpenStack
     - Linux
 
@@ -93,11 +96,13 @@ skills:
     - Python
     - Java
     - React
-    - REST API
-    - JavaScript
-    - HTML/CSS
     - XML
     - JSON
+    - REST API
+    - HTML
+    - CSS
+    - JavaScript
+    - SQL
 
   analytics:
     - PowerBI
@@ -114,9 +119,14 @@ skills:
     - Bitbucket
     - Microsoft Office Suite
 
+  ai_ml:
+    - Hands-on experience with LLMs (GPT-4, GPT-4.5, Llama, Qwen) and AI frameworks (OpenAI API, Hugging Face)
+    - Built agentic AI systems with autonomous research capabilities and RAG implementations for AI-powered knowledge synthesis
+    - Experience testing, optimizing, and providing feedback on ML models, particularly Arabic language models
+    - Understanding of AI model lifecycles, data analytics workflows, and AI value articulation to business stakeholders
+
 interests:
-  - Off-Road Adventures
-  - Plant Cultivation
-  - Board Games
-  - Video Gaming
-  - History Literature
+  - Off-Road Trips
+  - Plants
+  - Board & Video Games
+  - History Books
