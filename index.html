@@ -579,7 +579,11 @@ layout: none
 
                     <div class="skill-category">
                         <div class="skill-category-title">Core Competencies</div>
-                        <div class="skill-text">{% for comp in site.data.resume.skills.competencies %}{{ comp }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                        <div class="skill-tags">
+                            {% for comp in site.data.resume.skills.competencies %}
+                            <span class="skill-tag">{{ comp }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div class="skill-category">
@@ -615,17 +619,29 @@ layout: none
 
                     <div class="skill-category">
                         <div class="skill-category-title">Analytics & BI</div>
-                        <div class="skill-text">{% for tool in site.data.resume.skills.analytics %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                        <div class="skill-tags">
+                            {% for tool in site.data.resume.skills.analytics %}
+                            <span class="skill-tag">{{ tool }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Enterprise Tools</div>
-                        <div class="skill-text">{% for tool in site.data.resume.skills.tools %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                        <div class="skill-tags">
+                            {% for tool in site.data.resume.skills.tools %}
+                            <span class="skill-tag">{{ tool }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Interests</div>
-                        <div class="skill-text">{% for interest in site.data.resume.interests %}{{ interest }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                        <div class="skill-tags">
+                            {% for interest in site.data.resume.interests %}
+                            <span class="skill-tag">{{ interest }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
