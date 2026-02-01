@@ -16,571 +16,579 @@ layout: default
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            color: #54575a;
-            background: #eef3f8;
+            color: rgba(0, 0, 0, 0.9);
+            background: #f3f2ef;
             min-height: 100vh;
-            padding: 20px 0;
+            padding: 24px 0 0 0;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 0;
-            box-shadow: 0 0 0 1px #d5dce0;
-            overflow: hidden;
-            animation: fadeIn 0.8s ease-in;
+            max-width: 1128px;
+            margin: 24px auto;
+            display: grid;
+            grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
+            gap: 24px;
+            padding: 0 24px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .header {
-            background: linear-gradient(135deg, #0a66c2 0%, #0d47a1 100%);
-            color: white;
-            padding: 0;
-            position: relative;
-            overflow: hidden;
-            height: 200px;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            height: 100%;
-        }
-
-        .profile-card {
-            background: white;
-            color: #54575a;
-            margin: -80px 40px 0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 0 1px #d5dce0;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .profile-avatar {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #0a66c2 0%, #0d47a1 100%);
-            border-radius: 50%;
-            margin: -70px auto 20px;
+        .main-column {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            font-weight: 700;
-            color: white;
-            border: 4px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            background-size: cover;
-            background-position: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .side-column {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
             overflow: hidden;
         }
 
-        .profile-avatar img {
+        .profile-header-card {
+            position: relative;
+        }
+
+        .profile-cover {
+            height: 120px;
+            background: linear-gradient(to right, #1b4965, #0a66c2);
+            position: relative;
+        }
+
+        .profile-content {
+            padding: 0 24px 24px;
+            position: relative;
+        }
+
+        .profile-photo-container {
+            position: relative;
+            margin-top: -75px;
+            margin-bottom: 16px;
+        }
+
+        .profile-photo {
+            width: 152px;
+            height: 152px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .profile-info h1 {
-            font-size: 2em;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: #1a1a1a;
-        }
-
-        .profile-info .tagline {
-            font-size: 1.1em;
-            color: #0a66c2;
-            margin-bottom: 8px;
+        .profile-name {
+            font-size: 24px;
+            line-height: 1.25;
             font-weight: 600;
-        }
-
-        .profile-info .subtitle {
-            font-size: 0.95em;
-            color: #757f87;
-            font-weight: 400;
-            font-style: normal;
-            margin-bottom: 15px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 24px;
-            background: #0a66c2;
-            border: 2px solid #0a66c2;
-            border-radius: 24px;
-            transition: all 0.3s ease;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-
-        .contact-links a:first-child {
-            background: white;
-            color: #0a66c2;
-        }
-
-        .contact-links a:first-child:hover {
-            background: #f0f6ff;
-        }
-
-        .contact-links a:not(:first-child):hover {
-            background: #004782;
-            border-color: #004782;
-        }
-
-        .content {
-            padding: 40px 40px;
-            background: #f8f9fa;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 24px;
-        }
-
-        .main-content {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 0 1px #d5dce0;
-            padding: 40px;
-        }
-
-        .sidebar {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 0 1px #d5dce0;
-            padding: 24px;
-            height: fit-content;
-            position: sticky;
-            top: 20px;
-        }
-
-        .sidebar-section h3 {
-            font-size: 0.95em;
-            color: #1a1a1a;
-            margin-bottom: 16px;
-            font-weight: 700;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e1e8ed;
-        }
-
-        .sidebar-section p {
-            font-size: 0.85em;
-            color: #757f87;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 1.5em;
-            color: #1a1a1a;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #e1e8ed;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .job, .education-item {
-            margin-bottom: 28px;
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            border-left: none;
-            box-shadow: none;
-            border-bottom: 1px solid #e1e8ed;
-            transition: all 0.3s ease;
-        }
-
-        .job:last-child, .education-item:last-child {
-            border-bottom: none;
-        }
-
-        .job:hover, .education-item:hover {
-            box-shadow: none;
-            background: transparent;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            padding-bottom: 12px;
-        }
-
-        .job-title {
-            font-size: 1.15em;
-            font-weight: 700;
-            color: #1a1a1a;
+            color: rgba(0, 0, 0, 0.9);
             margin-bottom: 4px;
         }
 
-        .company {
-            font-size: 1em;
-            color: #757f87;
+        .profile-headline {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            margin-bottom: 4px;
+        }
+
+        .profile-location {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 12px;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #0a66c2;
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .date-location {
-            text-align: right;
-            color: #757f87;
-            font-size: 0.85em;
-            font-weight: 500;
+        .btn-primary:hover {
+            background: #004182;
         }
 
-        .job-description {
-            margin-top: 12px;
-        }
-
-        .job-description p {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #54575a;
-            font-size: 0.95em;
-        }
-
-        .job-description ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        .job-description li {
-            margin-bottom: 8px;
-            color: #54575a;
-            line-height: 1.6;
-            font-size: 0.95em;
-        }
-
-        .job-description .highlight {
-            background: rgba(10, 102, 194, 0.1);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 700;
-            color: #0a66c2;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .skill-category {
+        .btn-secondary {
             background: transparent;
-            padding: 0;
-            border-radius: 0;
-            border-top: none;
-            box-shadow: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid #e1e8ed;
-            padding-bottom: 24px;
+            color: #0a66c2;
+            border: 1px solid #0a66c2;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .skill-category:last-child {
+        .btn-secondary:hover {
+            background: rgba(112, 181, 249, 0.08);
+            border-color: #004182;
+        }
+
+        .section-card {
+            padding: 24px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+        }
+
+        .experience-item {
+            display: flex;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-item:last-child {
             border-bottom: none;
         }
 
-        .skill-category:hover {
-            box-shadow: none;
-            transform: none;
+        .experience-logo {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
         }
 
-        .skill-category h3 {
-            color: #1a1a1a;
-            margin-bottom: 12px;
-            font-size: 1em;
-            font-weight: 700;
-        }
-
-        .skill-category p {
-            color: #757f87;
-            line-height: 1.6;
-            font-size: 0.9em;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 12px;
-        }
-
-        .tag {
-            background: #e7f3ff;
-            color: #0a66c2;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid #d0e7ff;
-        }
-
-        .tag:hover {
+        .experience-logo-placeholder {
+            width: 48px;
+            height: 48px;
             background: #0a66c2;
-            color: white;
-            transform: scale(1.08);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
         }
 
-        .footer {
-            background: #f8f9fa;
-            padding: 24px 40px;
-            text-align: center;
-            color: #757f87;
-            border-top: 1px solid #d5dce0;
-            margin-top: 40px;
+        .experience-content {
+            flex: 1;
+            min-width: 0;
         }
 
-        .footer p {
-            font-size: 0.85em;
-            color: #757f87;
-            margin: 4px 0;
+        .experience-title {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+            margin-bottom: 2px;
         }
 
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.2em;
-            }
-            
-            .header .tagline {
-                font-size: 1.1em;
-            }
+        .experience-company {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.9);
+            margin-bottom: 2px;
+        }
 
-            .content {
-                padding: 30px 20px;
-            }
+        .experience-meta {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 8px;
+        }
 
-            .content-wrapper {
-                grid-template-columns: 1fr;
-            }
+        .experience-description {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.9);
+            margin-top: 8px;
+        }
 
-            .main-content {
-                padding: 24px;
-            }
+        .experience-description ul {
+            margin-left: 20px;
+            margin-top: 4px;
+        }
 
-            .sidebar {
-                padding: 24px;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
-
-            .date-location {
-                text-align: left;
-                margin-top: 8px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .job, .education-item {
-                padding: 0;
-            }
-
-            .profile-card {
-                margin-left: 20px;
-                margin-right: 20px;
-            }
+        .experience-description li {
+            margin-bottom: 4px;
+            color: rgba(0, 0, 0, 0.9);
         }
 
         .highlight {
             background: rgba(10, 102, 194, 0.1);
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 2px 6px;
+            border-radius: 3px;
             font-weight: 600;
             color: #0a66c2;
+        }
+
+        .education-item {
+            display: flex;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-logo-placeholder {
+            width: 48px;
+            height: 48px;
+            background: #0a66c2;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .skill-category {
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-category:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .skill-category-title {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(10, 102, 194, 0.08);
+            color: #0a66c2;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(10, 102, 194, 0.2);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(10, 102, 194, 0.15);
+        }
+
+        .skill-text {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .about-card {
+            padding: 24px;
+        }
+
+        .about-title {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .contact-info {
+            padding: 24px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            line-height: 1.3333;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 2px;
+        }
+
+        .contact-value {
+            font-size: 14px;
+            line-height: 1.4286;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .contact-value a {
+            color: #0a66c2;
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                max-width: 720px;
+            }
+
+            .side-column {
+                grid-row: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 16px auto;
+                padding: 0 16px;
+                gap: 16px;
+            }
+
+            .section-card,
+            .about-card,
+            .contact-info {
+                padding: 16px;
+            }
+
+            .profile-content {
+                padding: 0 16px 16px;
+            }
+
+            .profile-photo-container {
+                margin-top: -60px;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-name {
+                font-size: 20px;
+            }
+
+            .profile-headline {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="header-content"></div>
-        </div>
-
-        <div class="profile-card">
-            <div class="profile-avatar">
-                <img src="https://media.licdn.com/dms/image/v2/C4D03AQHpGW1tzd55Qw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1609327951152?e=1771459200&v=beta&t=Agnxe-x4BvIqQLFvDb8YoYCeC06JKPHSMDzMs-zIY6c" alt="{{ site.name }}">
-            </div>
-            <div class="profile-info">
-                <h1>{{ site.name }}</h1>
-                <p class="tagline">{{ site.tagline }}</p>
-                <p class="subtitle">{{ site.location }}</p>
-                <div class="contact-links">
-                    <a href="mailto:{{ site.email }}">Message</a>
-                    <a href="{{ site.linkedin }}">LinkedIn</a>
-                    <a href="{{ site.website }}">Portfolio</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="content-wrapper">
-                <div class="main-content">
-                    <section class="section">
-                        <h2 class="section-title">💼 Experience</h2>
-                        
-                        {% for job in site.data.resume.experience %}
-                        <div class="job">
-                            <div class="job-header">
-                                <div>
-                                    <div class="job-title">{{ job.title }}</div>
-                                    <div class="company">{{ job.company }}</div>
-                                </div>
-                                <div class="date-location">
-                                    <div>{{ job.period }}</div>
-                                    {% if job.location %}<div>{{ job.location }}</div>{% endif %}
-                                </div>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    {% for achievement in job.achievements %}
-                                    <li>{{ achievement }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+        <div class="main-column">
+            <!-- Profile Header -->
+            <div class="card profile-header-card">
+                <div class="profile-cover"></div>
+                <div class="profile-content">
+                    <div class="profile-photo-container">
+                        <div class="profile-photo">
+                            <img src="https://media.licdn.com/dms/image/v2/C4D03AQHpGW1tzd55Qw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1609327951152?e=1771459200&v=beta&t=Agnxe-x4BvIqQLFvDb8YoYCeC06JKPHSMDzMs-zIY6c" alt="{{ site.name }}">
                         </div>
-                        {% endfor %}
-                    </section>
-
-                    <section class="section">
-                        <h2 class="section-title">🎓 Education</h2>
-                        
-                        {% for edu in site.data.resume.education %}
-                        <div class="education-item">
-                            <div class="job-header">
-                                <div>
-                                    <div class="job-title">{{ edu.degree }}</div>
-                                    <div class="company">{{ edu.school }}</div>
-                                </div>
-                                <div class="date-location">
-                                    <div>Graduated {{ edu.graduation }}</div>
-                                    {% if edu.location %}<div>{{ edu.location }}</div>{% endif %}
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </section>
-
-                    <section class="section">
-                        <h2 class="section-title">🚀 Skills</h2>
-                        
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h3>Professional Certifications</h3>
-                                <div class="tags">
-                                    {% for cert in site.data.resume.skills.certifications %}
-                                    <span class="tag">{{ cert }}</span>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Core Competencies</h3>
-                                <p>{% for comp in site.data.resume.skills.competencies %}{{ comp }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Cloud & Infrastructure</h3>
-                                <div class="tags">
-                                    {% for tech in site.data.resume.skills.cloud %}
-                                    <span class="tag">{{ tech }}</span>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Development & APIs</h3>
-                                <div class="tags">
-                                    {% for tech in site.data.resume.skills.development %}
-                                    <span class="tag">{{ tech }}</span>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Analytics & BI</h3>
-                                <p>{% for tool in site.data.resume.skills.analytics %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Enterprise Tools</h3>
-                                <p>{% for tool in site.data.resume.skills.tools %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Personal Interests</h3>
-                                <p>{% for interest in site.data.resume.interests %}{{ interest }}{% unless forloop.last %} • {% endunless %}{% endfor %}</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="sidebar">
-                    <div class="sidebar-section">
-                        <h3>About</h3>
-                        <p>{{ site.subtitle }}</p>
                     </div>
-
-                    <div class="sidebar-section">
-                        <h3>Contact</h3>
-                        <p><strong>Email:</strong><br><a href="mailto:{{ site.email }}" style="color: #0a66c2; text-decoration: none;">{{ site.email }}</a></p>
+                    <h1 class="profile-name">{{ site.name }}</h1>
+                    <div class="profile-headline">{{ site.tagline }}</div>
+                    <div class="profile-location">{{ site.location }}</div>
+                    <div class="profile-actions">
+                        <a href="mailto:{{ site.email }}" class="btn-primary">Message</a>
+                        <a href="{{ site.linkedin }}" class="btn-secondary">Connect</a>
+                        <a href="{{ site.website }}" class="btn-secondary">Portfolio</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Experience Section -->
+            <div class="card section-card">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                </div>
+                
+                {% for job in site.data.resume.experience %}
+                <div class="experience-item">
+                    <div class="experience-logo">
+                        <div class="experience-logo-placeholder">{{ job.company | slice: 0 }}</div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-title">{{ job.title }}</div>
+                        <div class="experience-company">{{ job.company }}</div>
+                        <div class="experience-meta">
+                            {{ job.period }}{% if job.location %} · {{ job.location }}{% endif %}
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                {% for achievement in job.achievements %}
+                                <li>{{ achievement }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Education Section -->
+            <div class="card section-card">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                </div>
+                
+                {% for edu in site.data.resume.education %}
+                <div class="education-item">
+                    <div class="experience-logo">
+                        <div class="education-logo-placeholder">🎓</div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-title">{{ edu.degree }}</div>
+                        <div class="experience-company">{{ edu.school }}</div>
+                        <div class="experience-meta">
+                            Graduated {{ edu.graduation }}{% if edu.location %} · {{ edu.location }}{% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Skills Section -->
+            <div class="card section-card">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Professional Certifications</div>
+                        <div class="skill-tags">
+                            {% for cert in site.data.resume.skills.certifications %}
+                            <span class="skill-tag">{{ cert }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Core Competencies</div>
+                        <div class="skill-text">{% for comp in site.data.resume.skills.competencies %}{{ comp }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Cloud & Infrastructure</div>
+                        <div class="skill-tags">
+                            {% for tech in site.data.resume.skills.cloud %}
+                            <span class="skill-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Development & APIs</div>
+                        <div class="skill-tags">
+                            {% for tech in site.data.resume.skills.development %}
+                            <span class="skill-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% if site.data.resume.skills.ai_ml %}
+                    <div class="skill-category">
+                        <div class="skill-category-title">AI & Machine Learning</div>
+                        <div class="skill-text">{% for item in site.data.resume.skills.ai_ml %}{{ item }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                    </div>
+                    {% endif %}
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Analytics & BI</div>
+                        <div class="skill-text">{% for tool in site.data.resume.skills.analytics %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Enterprise Tools</div>
+                        <div class="skill-text">{% for tool in site.data.resume.skills.tools %}{{ tool }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Interests</div>
+                        <div class="skill-text">{% for interest in site.data.resume.interests %}{{ interest }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="footer">
-            <p>© 2024 {{ site.name }}</p>
-            <p>Built with Jekyll • Hosted on GitHub Pages</p>
+        <div class="side-column">
+            <!-- About Card -->
+            <div class="card about-card">
+                <h3 class="about-title">About</h3>
+                <p class="about-text">{{ site.subtitle }}</p>
+            </div>
+
+            <!-- Contact Info Card -->
+            <div class="card contact-info">
+                <h3 class="about-title">Contact Info</h3>
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Website</div>
+                    <div class="contact-value"><a href="{{ site.website }}" target="_blank">{{ site.website }}</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value"><a href="{{ site.linkedin }}" target="_blank">View Profile</a></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
