@@ -329,6 +329,49 @@ layout: none
             color: rgba(0, 0, 0, 0.6);
         }
 
+        /* AI/ML Highlight Cards */
+        .ai-ml-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .ai-ml-card {
+            background: linear-gradient(135deg, rgba(10, 102, 194, 0.08) 0%, rgba(10, 102, 194, 0.03) 100%);
+            border: 1.5px solid rgba(10, 102, 194, 0.25);
+            border-radius: 8px;
+            padding: 16px 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-ml-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #0a66c2, #004182);
+        }
+
+        .ai-ml-card:hover {
+            background: linear-gradient(135deg, rgba(10, 102, 194, 0.12) 0%, rgba(10, 102, 194, 0.06) 100%);
+            border-color: rgba(10, 102, 194, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.15);
+        }
+
+        .ai-ml-card-text {
+            font-size: 15px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 500;
+            padding-left: 6px;
+        }
+
         .about-card {
             padding: 26px;
         }
@@ -436,6 +479,10 @@ layout: none
 
             .profile-cover {
                 height: 120px;
+            }
+
+            .ai-ml-highlights {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -556,7 +603,13 @@ layout: none
                     {% if site.data.resume.skills.ai_ml %}
                     <div class="skill-category">
                         <div class="skill-category-title">AI & Machine Learning</div>
-                        <div class="skill-text">{% for item in site.data.resume.skills.ai_ml %}{{ item }}{% unless forloop.last %} • {% endunless %}{% endfor %}</div>
+                        <div class="ai-ml-highlights">
+                            {% for item in site.data.resume.skills.ai_ml %}
+                            <div class="ai-ml-card">
+                                <div class="ai-ml-card-text">{{ item }}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                     {% endif %}
 
